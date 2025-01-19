@@ -7,5 +7,5 @@
    ```cmd
    docker-compose up --build -d
    ```
-5) Browse to http://localhost:{port} to access the react app.
+5) Browse to http://localhost:{port} to access the react app. The default port is 80.
 
