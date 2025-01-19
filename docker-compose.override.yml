@@ -1,0 +1,39 @@
+version: '3.4'
+
+services:
+  cms-db:
+    container_name: cms-db
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=P@ssw0rd2323
+    restart: always
+    ports:
+      - '1433:1433'
+  cms-api:
+    container_name: cms-api
+    depends_on:
+      - cms-db
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=pass123
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ConnectionStrings__Database=Data Source=cms-db;Initial Catalog=CmsDb;User ID=sa;Password=P@ssw0rd2323;Encrypt=False;Trust Server Certificate=True
+      - Domain__HttpHost=http://localhost:5001
+      - Domain__HttpsHost=https://localhost:6001
+      - StaticFiles__UploadedDirectory=UploadedFiles
+    ports:
+      - '5001:8080'
+      - '6001:8081'
+    volumes:
+      - ./:/https:ro
+  cms-frontend:
+    container_name: cms-frontend
+    depends_on:
+      - cms-api
+    ports:
+      - '80:80'
+    restart: always
+    environment:
+      - VITE_API_BASE_URL=https://localhost:6001

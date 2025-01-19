@@ -1,0 +1,7 @@
+.actionsContainer {
+  display: flex;
+}
+
+.actionsContainer > button {
+  margin:5px;
+}

@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  cms-db:
+    image: mcr.microsoft.com/mssql/server
+  cms-api:
+    image: ${DOCKER_REGISTRY-}cmsapi
+    build:
+      context: ./Backend
+      dockerfile: CMS.API/Dockerfile
+  cms-frontend:
+    build: ./Frontend
+    ports:
+      - '80:80'
+    container_name: cms-frontend
+    restart: always
+    environment:
+      - VITE_API_BASE_URL=https://localhost:6001

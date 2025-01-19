@@ -1,0 +1,97 @@
+.dialogTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.inputField > label, input, textarea {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.inputField label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.inputField input, .inputField textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.875rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submitButton {
+  background-color: #4f93ce;
+  color: white;
+  border: none;
+}
+
+.cancelButton {
+  background-color: #d5d5d5;
+  color: #555;
+  border: none;
+}
+
+
+/* Style the file input field */
+.inputField input[type="file"] {
+  display: none;  /* Hide the default file input */
+}
+
+/* Create a custom button for the file input */
+.inputField .file-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4f93ce;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.inputField .file-label:hover {
+  background-color: #285f8f;  /* Darken the button on hover */
+}
+
+/* Add a file name display once the file is selected */
+.inputField .file-name {
+  margin-top: 10px;
+  font-size: 0.875rem;
+  color: #555;
+  font-weight: 400;
+}
+

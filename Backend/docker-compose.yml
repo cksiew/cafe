@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  cmsdb:
+    image: mcr.microsoft.com/mssql/server
+  # cms.api:
+  #   image: ${DOCKER_REGISTRY-}cmsapi
+  #   build:
+  #     context: .
+  #     dockerfile: CMS.API/Dockerfile

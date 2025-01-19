@@ -1,0 +1,10 @@
+﻿global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.DependencyInjection;
+global using CMS.Domain.Models;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using CMS.Domain.Enums;
+global using CMS.Domain.ValueObjects;
+global using Microsoft.EntityFrameworkCore.ChangeTracking;
+global using Microsoft.EntityFrameworkCore.Diagnostics;
+global using CMS.Domain.Abstractions;
+global using System.Reflection;

@@ -1,0 +1,30 @@
+.breadcrumb nav{
+  text-align:left;
+  padding: 5px 0 5px 0;
+}
+
+
+.breadcrumb ul{
+  list-style: none;
+  text-decoration:none;
+  display:flex;
+  flex-direction: row;
+}
+
+.breadcrumb li:after{
+  content: ">";
+  margin: 0 5px 0 5px;
+
+}
+
+.breadcrumb a{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+.breadcrumb span{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  margin: 5px 0 5px 0;
+}

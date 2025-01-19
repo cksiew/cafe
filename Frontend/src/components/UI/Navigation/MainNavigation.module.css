@@ -1,0 +1,18 @@
+.header {
+  max-width: 60rem;
+  /* margin: auto; */
+  padding: 2rem;
+  text-align: left;
+}
+
+.header a {
+  text-decoration: none;
+  color: var(--color-primary-400);
+  font-size: 1.5rem;
+}
+
+.header a:hover,
+.header a.active {
+  color: var(--color-primary-800);
+  text-decoration: none;
+}
