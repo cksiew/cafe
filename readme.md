@@ -5,7 +5,7 @@
 3) Make the necessary port modification in "docker-compose.override.yml" 
 4) Run the following command
    ```cmd
-   docker-compose --build -d
+   docker-compose up --build -d
    ```
-5) Browse to http://localhost:{port} to access the react app.
+5) Browse to http://localhost:{port} to access the react app. The default port is 80.
 
