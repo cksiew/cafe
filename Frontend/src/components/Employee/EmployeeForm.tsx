@@ -76,7 +76,7 @@ const EmployeeForm: FC<{ open: boolean, handleClose: () => void, isEdit: boolean
               phoneNumber: isEdit && employeeToBeEdited ? employeeToBeEdited.phoneNumber : '',
               cafeId: (!isEdit ? cafeId : (employeeToBeEdited ? employeeToBeEdited.cafeId : '')),
             }}
-            render={({ handleSubmit, submitting, pristine }) => (
+            render={({ handleSubmit, submitting }) => (
               <form onSubmit={handleSubmit} className={classes.formContainer}>
                 <Field name="id">
                   {({ input }) => (
@@ -123,7 +123,7 @@ const EmployeeForm: FC<{ open: boolean, handleClose: () => void, isEdit: boolean
                 />
                 <div className={classes.buttons}>
                   <Button variant='contained' size="small" type="submit" className={`${classes.button} ${classes.submitButton}`} disabled={submitting}>Submit</Button>
-                  <Button variant='contained' size="small" onClick={handleClose} className={`${classes.button} ${classes.cancelButton}`} disabled={submitting || pristine}>Cancel</Button>
+                  <Button variant='contained' size="small" onClick={handleClose} className={`${classes.button} ${classes.cancelButton}`} disabled={submitting}>Cancel</Button>
                 </div>
               </form>
             )}
